@@ -47,7 +47,7 @@ body {
 #stickyColumnWrap {
     width: 325px;
     position: relative;
-    z-index: 10;
+    z-index: 1000;
 }
 
 #stickyColumn {
@@ -89,14 +89,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 17px;
-    right: -22px;
+    left: 303px;
     background: #E7AF3E;
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    transition: 0.25s;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #side-nav-close:hover {
@@ -106,24 +108,42 @@ body {
 
 #side-nav-close svg {
     width: 23px;
+    height: 23px;
     transition: 0.25s;
     stroke: #FFF8F0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#side-nav-close:hover svg {
-    transform: rotate(45deg);
+#side-nav-close .menu-icon {
+    display: none;
 }
 
-.nav-closed #side-nav-close svg {
-    transform: rotate(45deg);
+#side-nav-close:hover .close-icon {
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.nav-closed #side-nav-close:hover svg {
-    transform: rotate(0deg);
+.nav-closed #side-nav-close .close-icon {
+    display: none;
+}
+
+.nav-closed #side-nav-close .menu-icon {
+    display: block;
+}
+
+.nav-closed #side-nav-close:hover .menu-icon {
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .nav-closed #stickyColumn {
-    transform: translate3d(-98%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.nav-closed #side-nav-close {
+    left: 20px;
 }
 
 /* Logo */
@@ -233,7 +253,7 @@ body {
 }
 
 .nav-closed #mainContent {
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 /* Hero Section */
@@ -701,8 +721,7 @@ h1 u::after {
     }
 
     #side-nav-close {
-        right: 40px;
-        top: 40px;
+        display: none;
     }
 
     #mainContent {

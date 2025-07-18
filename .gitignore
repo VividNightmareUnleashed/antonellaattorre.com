@@ -31,3 +31,6 @@ build/
 
 # Zone Identifier files (Windows)
 *.Zone.Identifier
+
+# Generated files
+antonella-portfolio-single-file.html

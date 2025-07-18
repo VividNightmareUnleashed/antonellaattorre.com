@@ -4,11 +4,15 @@
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', 'Georgia', serif;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .section-header, .company-section h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 /* Reset & Base Styles */
@@ -19,10 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
     background: #FFF8F0;
     color: #000;
     overflow-x: hidden;
+    letter-spacing: 0.01em;
 }
 
 /* Container Structure */
@@ -140,9 +146,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 72px;
-    font-weight: 800;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
     color: #BA8E38;
     text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 2px 8px rgba(186, 142, 56, 0.2);
 }
 
 .logo:hover {
@@ -162,12 +171,12 @@ body {
 
 .company-section h2 {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     color: #BA8E38;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.08em;
+    font-family: 'Raleway', sans-serif;
 }
 
 .company-description {
@@ -180,13 +189,13 @@ body {
 /* Section Headers */
 .section-header {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     color: #BA8E38;
     margin-top: 30px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.08em;
+    font-family: 'Raleway', sans-serif;
 }
 
 .section-divider {
@@ -201,8 +210,9 @@ body {
     padding: 12px 0;
     color: #000;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
     transition: all 0.3s ease;
     position: relative;
     white-space: normal;
@@ -290,11 +300,13 @@ body {
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 900;
+    font-size: 52px;
+    font-weight: 300;
     color: #000;
     margin-bottom: 20px;
     line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 h1 u {
@@ -309,15 +321,23 @@ h1 u::after {
     bottom: -5px;
     left: 0;
     width: 100%;
-    height: 3px;
-    background: #E7AF3E;
+    height: 2px;
+    background: linear-gradient(90deg, #BA8E38, #E7AF3E, #BA8E38);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
 }
 
 .description {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.8;
     color: #000;
     margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
 /* CTA Button */
@@ -327,10 +347,11 @@ h1 u::after {
     background: #BA8E38;
     color: #FFF8F0;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     border: none;
     border-bottom: 6px solid #8F7239;
     transition: all 0.3s ease;
@@ -367,10 +388,12 @@ h1 u::after {
 }
 
 .featured-section h2 {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 30px;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .featured-text {
@@ -405,10 +428,12 @@ h1 u::after {
 }
 
 .stat-number {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 42px;
+    font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
     color: #BA8E38;
     margin-bottom: 10px;
+    letter-spacing: 0.02em;
 }
 
 .stat-label {
@@ -420,10 +445,12 @@ h1 u::after {
 
 /* Companies Section */
 .companies-section h2 {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 40px;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .companies-grid {
@@ -472,9 +499,12 @@ h1 u::after {
 
 .company-name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
     color: #BA8E38;
     margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 3px rgba(186, 142, 56, 0.15);
 }
 
 .learn-more {
@@ -524,10 +554,12 @@ h1 u::after {
 }
 
 .testimonials-section h2 {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 40px;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card {
@@ -567,10 +599,12 @@ h1 u::after {
 }
 
 .brands-section h2 {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 20px;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .brands-text {
